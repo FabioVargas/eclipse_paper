@@ -1,0 +1,32 @@
+*.tiff
+*.tif
+*.jpg
+*.pdf
+*.eps
+*.~
+*.xlsx
+*.docx
+*.png
+*.bib
+*.gif
+*.mlx
+*.m
+*.sfit
+
+.DS_Store
+*.
+
+!.gitignore
+
+/ALOMR drawing/
+/Eclipse data ROF_AO/
+/GOLD/
+/eclipse day meteorology/
+/eclipse pics/
+/figs/
+/gps/
+/misc/
+/refs/
+/revision_r1/
+/tecMaps/
+
