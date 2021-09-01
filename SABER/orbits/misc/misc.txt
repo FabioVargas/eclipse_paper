@@ -1,0 +1,249 @@
+
+
+% % to read a vriable 'var' exisiting in nc file
+% colormap default
+% 
+% 
+% 
+% for i = 1: length(ncfile)
+%     
+%     date = ncread(ncfile(i), 'date');
+%     time = ncread(ncfile(i), 'time');
+%     localTime = ncread(ncfile(i), 'tpSolarLT');
+%     latitude = ncread(ncfile(i), 'tplatitude');
+%     longitude = ncread(ncfile(i), 'tplongitude');
+%     altitude = ncread(ncfile(i), 'tpaltitude');
+%     temperature = ncread(ncfile(i), 'ktemp');
+%     pressure = ncread(ncfile(i), 'pressure');
+%     airDensity = ncread(ncfile(i), 'density');
+%     atomicOxygenMixingRatio = ncread(ncfile(i), 'O');
+%     verOH16 = ncread(ncfile(i), 'OH_16_ver');
+%     verOH20 = ncread(ncfile(i), 'OH_20_ver');
+%     
+%     idx = (latitude > GEOLAT-DLAT & latitude < GEOLAT+DLAT) & ...
+%         (longitude > GEOLON-DLON & longitude < GEOLON+DLON) & ...
+%         altitude >=75 & altitude <=105;
+%     
+%     tmp(i) = ncfile(i);
+%     
+%     verOH16(~idx) = [];
+%     altitude(~idx) = [];
+%     
+%     %     disp(time(idx)/1000/60/60)
+%     
+%     %     hold on
+%     plot(verOH16, altitude)
+%     %     hold off
+%     
+% end
+% 
+% title('verOH16', "Interpreter","none")
+% ylabel('Altitude (km)')
+% xlabel('OH volume emission rate (ergs cm^{-3} sec^{-1})')
+% % axis tight
+% ylim([75 105])
+% xlim([0 3.2e-7])
+% 
+% hl = legend(tmp);
+% hl.Interpreter = "none";
+% 
+% ha=gca;
+% ha.XMinorTick = "on";
+% ha.YMinorTick = "on";
+% ha.Box = "on" ;
+% ha.XGrid = "on";
+% ha.YGrid = "on";
+% ha.FontSize = 12;
+% ha.FontWeight = "bold";
+
+% 
+% % to read a vriable 'var' exisiting in nc file
+% 
+% 
+% for i = 1: length(ncfile)
+%     
+%     date = ncread(ncfile(i), 'date');
+%     time = ncread(ncfile(i), 'time');
+%     localTime = ncread(ncfile(i), 'tpSolarLT');
+%     latitude = ncread(ncfile(i), 'tplatitude');
+%     longitude = ncread(ncfile(i), 'tplongitude');
+%     altitude = ncread(ncfile(i), 'tpaltitude');
+%     temperature = ncread(ncfile(i), 'ktemp');
+%     pressure = ncread(ncfile(i), 'pressure');
+%     airDensity = ncread(ncfile(i), 'density');
+%     atomicOxygenMixingRatio = ncread(ncfile(i), 'O');
+%     verOH16 = ncread(ncfile(i), 'OH_16_ver');
+%     verOH20 = ncread(ncfile(i), 'OH_20_ver');
+%     
+%     idx = (latitude > GEOLAT-DLAT & latitude < GEOLAT+DLAT) & ...
+%         (longitude > GEOLON-DLON & longitude < GEOLON+DLON) & ...
+%         altitude >=75 & altitude <=105;
+%     
+%     tmp(i) = [ncfile(i)];
+%     
+%     verOH20(~idx) = [];
+%     altitude(~idx) = [];
+%     
+%     %     hold on
+%     plot(verOH20, altitude)
+%     %     hold off
+%     
+% end
+% 
+% 
+% title('verOH20', "Interpreter","none")
+% ylabel('Altitude (km)')
+% xlabel('OH volume emission rate (ergs cm^{-3} sec^{-1})')
+% axis tight
+% ylim([75 105])
+% xlim([0 3.2e-7])
+% 
+% hl = legend(tmp);
+% hl.Interpreter = "none";
+% 
+% ha=gca;
+% ha.XMinorTick = "on";
+% ha.YMinorTick = "on";
+% ha.FontSize = 12;
+% ha.FontWeight = "bold";
+% ha.Box = "on" ;
+% ha.XGrid = "on";
+% ha.YGrid = "on";
+
+
+
+% % to read a vriable 'var' exisiting in nc file
+%
+%
+%
+% for i = 1: length(ncfile)
+%
+%     date = ncread(ncfile(i), 'date');
+%     time = ncread(ncfile(i), 'time');
+%     localTime = ncread(ncfile(i), 'tpSolarLT');
+%     latitude = ncread(ncfile(i), 'tplatitude');
+%     longitude = ncread(ncfile(i), 'tplongitude');
+%     altitude = ncread(ncfile(i), 'tpaltitude');
+%     temperature = ncread(ncfile(i), 'ktemp');
+%     pressure = ncread(ncfile(i), 'pressure');
+%     airDensity = ncread(ncfile(i), 'density');
+%     atomicOxygenMixingRatio = ncread(ncfile(i), 'O');
+%     verOH16 = ncread(ncfile(i), 'OH_16_ver');
+%     verOH20 = ncread(ncfile(i), 'OH_20_ver');
+%
+%     idx = (latitude > GEOLAT-DLAT & latitude < GEOLAT+DLAT) & ...
+%         (longitude > GEOLON-DLON & longitude < GEOLON+DLON) & ...
+%         altitude >=75 & altitude <=105;
+%
+%     tmp(i) = [ncfile(i)];
+%
+%     temperature(~idx) = [];
+%     altitude(~idx) = [];
+%     %     hold on
+%     plot(temperature, altitude)
+%     % hold off
+% end
+%
+%
+% axis tight
+% ylim([75 105])
+% xlim([150 250])
+%
+% hl = legend(tmp);
+% hl.Interpreter = "none";
+% hl.AutoUpdate = "off";
+%
+% title(' ', "Interpreter","none")
+% ylabel('Altitude (km)')
+% xlabel('Temperature (K)')
+%
+% ha=gca;
+% ha.XMinorTick = "on";
+% ha.YMinorTick = "on";
+% ha.Box = "on" ;
+% ha.XGrid = "on";
+% ha.YGrid = "on";
+% ha.FontSize = 12;
+% ha.FontWeight = "bold";
+
+% hold on
+T0 = 250; % K
+z0 = 85; % km
+for z0 = 70 :5 :105
+    temperatureAdiabatic = -9.8 .* (altitude - z0) + T0;
+    plot(temperatureAdiabatic, altitude, ':k')
+    
+end
+% hold off
+
+% % to read a vriable 'var' exisiting in nc file
+% 
+% 
+% 
+% for i = 1: length(ncfile)
+%     
+%     date = ncread(ncfile(i), 'date');
+%     time = ncread(ncfile(i), 'time');
+%     localTime = ncread(ncfile(i), 'tpSolarLT');
+%     latitude = ncread(ncfile(i), 'tplatitude');
+%     longitude = ncread(ncfile(i), 'tplongitude');
+%     altitude = ncread(ncfile(i), 'tpaltitude');
+%     temperature = ncread(ncfile(i), 'ktemp');
+%     pressure = ncread(ncfile(i), 'pressure');
+%     airDensity = ncread(ncfile(i), 'density');
+%     atomicOxygenMixingRatio = ncread(ncfile(i), 'O');
+%     verOH16 = ncread(ncfile(i), 'OH_16_ver');
+%     verOH20 = ncread(ncfile(i), 'OH_20_ver');
+%     
+%     idx = (latitude > GEOLAT-DLAT & latitude < GEOLAT+DLAT) & ...
+%         (longitude > GEOLON-DLON & longitude < GEOLON+DLON) & ...
+%         altitude >=75 & altitude <=105;
+%     
+%     longitude(~idx) = [];
+%     altitude(~idx) = [];
+%     
+%     plot(longitude, latitude, 'o')
+%     box on
+%     
+%     grid on
+%     
+% end
+% 
+% axis tight
+% ylim([75 105])
+% xlim([150 250])
+% 
+% hl = legend(tmp);
+% hl.Interpreter = "none";
+% hl.AutoUpdate = "off";
+% 
+% title('Saber passes near IAP', "Interpreter","none")
+% 
+% ha=gca;
+% ha.XMinorTick = "on";
+% ha.YMinorTick = "on";
+% ha.Box = "on" ;
+% ha.XGrid = "on";
+% ha.YGrid = "on";
+% 
+% 
+% % hold on
+% plot([GEOLON GEOLON], [GEOLAT-DLAT+3.5 GEOLAT+DLAT-3.5], 'k')
+% plot([GEOLON-DLON+3.5 GEOLON+DLON-3.5], [GEOLAT GEOLAT], 'k')
+% % hold off
+% 
+% xlabel('Longitude')
+% ylabel('Latitude')
+% xlim([GEOLON-DLON GEOLON+DLON])
+% ylim([GEOLAT-DLAT GEOLAT+DLAT])
+% box on
+% grid on
+% ax = gca;
+% ax.XMinorTick = 'on';
+% ax.YMinorTick = 'on';
+% % axis square
+% ha.FontSize = 12;
+% ha.FontWeight = "bold";
+% 
+% rectangle('Position',  [GEOLON-5/2 GEOLAT-5/2 5 5], ...
+%     'Curvature',[.05 .05]);
